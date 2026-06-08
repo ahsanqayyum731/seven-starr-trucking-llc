@@ -32,13 +32,20 @@ document.addEventListener('DOMContentLoaded', () => {
      2. Sticky Header & Mobile Navigation Menu
      ========================================================================== */
   const header = document.querySelector('.main-header');
+  let headerTicking = false;
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
+    if (!headerTicking) {
+      window.requestAnimationFrame(() => {
+        if (window.scrollY > 50) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+        headerTicking = false;
+      });
+      headerTicking = true;
     }
-  });
+  }, { passive: true });
 
   const menuToggle = document.querySelector('.menu-toggle');
   const navMenu = document.querySelector('.nav-menu');
@@ -69,32 +76,65 @@ document.addEventListener('DOMContentLoaded', () => {
   const truckWrapper = document.querySelector('.truck-3d-wrapper');
 
   if (truckObject && truckWrapper) {
-    // 3D rotation on scroll
-    window.addEventListener('scroll', () => {
-      const scrollPos = window.scrollY;
-      const wrapperOffset = truckWrapper.offsetTop;
-      const windowHeight = window.innerHeight;
+    let rect = null;
+    let wrapperOffset = truckWrapper.offsetTop;
+    let windowHeight = window.innerHeight;
+    let scrollTicking = false;
 
-      if (scrollPos > wrapperOffset - windowHeight && scrollPos < wrapperOffset + 400) {
-        const rotationY = -38 + (scrollPos - wrapperOffset) * 0.1;
-        truckObject.style.transform = `rotateX(-16deg) rotateY(${rotationY}deg) rotateZ(0deg)`;
+    // Cache metrics to avoid layout thrashing on scroll/mousemove
+    const updateMetrics = () => {
+      if (truckWrapper) {
+        rect = truckWrapper.getBoundingClientRect();
+        wrapperOffset = truckWrapper.offsetTop;
+        windowHeight = window.innerHeight;
       }
-    });
+    };
 
-    // 3D rotation on mouse move (hover depth)
+    // Initialize metrics
+    updateMetrics();
+
+    // Re-cache metrics on resize or when user first enters the 3D area
+    window.addEventListener('resize', updateMetrics, { passive: true });
+    truckWrapper.addEventListener('mouseenter', updateMetrics, { passive: true });
+
+    // 3D rotation on scroll (throttled with requestAnimationFrame)
+    window.addEventListener('scroll', () => {
+      if (!scrollTicking) {
+        window.requestAnimationFrame(() => {
+          const scrollPos = window.scrollY;
+          if (scrollPos > wrapperOffset - windowHeight && scrollPos < wrapperOffset + 400) {
+            const rotationY = -38 + (scrollPos - wrapperOffset) * 0.1;
+            truckObject.style.transform = `rotateX(-16deg) rotateY(${rotationY}deg) rotateZ(0deg)`;
+          }
+          scrollTicking = false;
+        });
+        scrollTicking = true;
+      }
+    }, { passive: true });
+
+    // 3D rotation on mouse move (throttled with requestAnimationFrame and cached rect)
+    let mouseTicking = false;
     truckWrapper.addEventListener('mousemove', (e) => {
-      const rect = truckWrapper.getBoundingClientRect();
-      const x = e.clientX - rect.left - rect.width / 2;
-      const y = e.clientY - rect.top - rect.height / 2;
-      
-      const rotY = -38 + (x / rect.width) * 45;
-      const rotX = -16 - (y / rect.height) * 30;
-      
-      truckObject.style.transform = `rotateX(${rotX}deg) rotateY(${rotY}deg) rotateZ(0deg)`;
-    });
+      if (!mouseTicking) {
+        window.requestAnimationFrame(() => {
+          if (!rect) rect = truckWrapper.getBoundingClientRect();
+          const x = e.clientX - rect.left - rect.width / 2;
+          const y = e.clientY - rect.top - rect.height / 2;
+          
+          const rotY = -38 + (x / rect.width) * 45;
+          const rotX = -16 - (y / rect.height) * 30;
+          
+          truckObject.style.transform = `rotateX(${rotX}deg) rotateY(${rotY}deg) rotateZ(0deg)`;
+          mouseTicking = false;
+        });
+        mouseTicking = true;
+      }
+    }, { passive: true });
 
     truckWrapper.addEventListener('mouseleave', () => {
-      truckObject.style.transform = `rotateX(-16deg) rotateY(-38deg) rotateZ(0deg)`;
+      window.requestAnimationFrame(() => {
+        truckObject.style.transform = `rotateX(-16deg) rotateY(-38deg) rotateZ(0deg)`;
+      });
     });
   }
 
