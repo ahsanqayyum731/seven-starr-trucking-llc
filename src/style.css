@@ -2577,14 +2577,38 @@ img {
 }
 
 @media (max-width: 768px) {
+  .section-padding {
+    padding: 60px 0;
+  }
   .section-title {
     font-size: 32px;
   }
   .hero-title {
-    font-size: 38px;
+    font-size: 36px;
   }
   .hero-subtitle {
     font-size: 16px;
+  }
+  .main-header.scrolled .header-container {
+    height: 80px; /* Maintain constant height on mobile for smooth navigation drawer */
+  }
+  .main-header .admin-trigger {
+    display: none; /* Hide admin button in header on mobile (accessible in footer) */
+  }
+  .phone-cta span {
+    display: none; /* Hide number text on mobile */
+  }
+  .phone-cta {
+    padding: 10px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .header-actions {
+    gap: 12px;
   }
   .nav-menu {
     position: fixed;
@@ -2622,9 +2646,25 @@ img {
   }
   .services-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
   .hero-stats-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .stat-card {
+    padding: 16px;
+    gap: 12px;
+  }
+  .stat-number {
+    font-size: 22px;
+  }
+  .stat-label {
+    font-size: 11px;
+  }
+  .stat-icon {
+    width: 40px;
+    height: 40px;
   }
   .fleet-gallery {
     grid-template-columns: 1fr;
@@ -2638,6 +2678,21 @@ img {
   .span-2 {
     grid-column: span 1;
   }
+  .recruitment-banner {
+    padding: 24px 16px;
+  }
+  .quote-grid {
+    padding: 24px 16px;
+  }
+  .quote-form-side {
+    padding-top: 24px;
+  }
+  .tracking-control-box {
+    padding: 24px 16px;
+  }
+  .map-wrapper {
+    height: 300px;
+  }
   .testimonial-card {
     padding: 30px 20px;
   }
@@ -2649,8 +2704,10 @@ img {
     height: 36px;
   }
   .chatbot-window {
-    width: calc(100vw - 40px);
-    right: -10px;
+    width: calc(100vw - 32px);
+    right: 16px;
+    bottom: 85px;
+    height: 450px;
   }
   .footer-grid {
     grid-template-columns: 1fr;
@@ -2662,5 +2719,32 @@ img {
   }
   .contact-actions-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-text {
+    font-size: 20px;
+  }
+  .logo-sub {
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+  .hero-title {
+    font-size: 30px;
+  }
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+  .hero-buttons .btn {
+    width: 100%;
+  }
+  .truck-3d-container {
+    transform: scale(0.8);
+  }
+  .truck-3d-wrapper {
+    height: 320px;
   }
 }
