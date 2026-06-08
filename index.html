@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seven Starr Trucking LLC | Premium Nationwide Dry Van Logistics</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Seven Starr Trucking LLC provides reliable, safe, and on-time nationwide 53ft Dry Van transportation services. Based in Hialeah, Florida. Join our fleet or request a freight quote today.">
+  <meta name="keywords" content="Seven Starr Trucking, trucking company, dry van transportation, freight shipping, logistics Florida, owner operator jobs, freight broker carrier, USDOT 4009071, MC 1689367">
+  <meta name="author" content="Seven Starr Trucking LLC">
+  <meta property="og:title" content="Seven Starr Trucking LLC | Moving Freight Across America">
+  <meta property="og:description" content="Dependable, customer-focused 53ft Dry Van transportation built on safety, trust, and on-time deliveries.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&q=80&w=800">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Leaflet Map CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="./src/style.css">
+  
+  <!-- Lucide Icons (via CDN) -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- Premium Page Loading Animation -->
+  <div id="loader" class="page-loader">
+    <div class="loader-content">
+      <div class="loader-truck">
+        <svg viewBox="0 0 100 40" class="truck-svg">
+          <!-- Trailer -->
+          <rect x="5" y="5" width="60" height="22" rx="2" fill="#FFFFFF" opacity="0.9" />
+          <!-- Cab -->
+          <path d="M66,12 L78,12 L84,20 L84,27 L66,27 Z" fill="#FF6B35" />
+          <rect x="68" y="14" width="7" height="6" fill="#0A192F" />
+          <!-- Wheels -->
+          <circle cx="20" cy="30" r="4" fill="#0A192F" stroke="#FFFFFF" stroke-width="1.5" />
+          <circle cx="30" cy="30" r="4" fill="#0A192F" stroke="#FFFFFF" stroke-width="1.5" />
+          <circle cx="55" cy="30" r="4" fill="#0A192F" stroke="#FFFFFF" stroke-width="1.5" />
+          <circle cx="76" cy="30" r="4" fill="#0A192F" stroke="#FFFFFF" stroke-width="1.5" />
+        </svg>
+        <div class="road-dots">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+      <h2 class="loader-title">SEVEN STARR TRUCKING</h2>
+      <p class="loader-subtitle">Loading Logistics Excellence...</p>
+    </div>
+  </div>
+
+  <!-- Header & Navigation -->
+  <header class="main-header">
+    <div class="container header-container">
+      <a href="#" class="logo-link">
+        <div class="logo-wrapper">
+          <span class="logo-text">SEVEN<span class="orange-text">STARR</span></span>
+          <span class="logo-sub">TRUCKING LLC</span>
+        </div>
+      </a>
+      
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="#" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#fleet" class="nav-link">Fleet</a></li>
+          <li><a href="#recruitment" class="nav-link">Join Our Fleet</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="tel:305-742-7190" class="phone-cta">
+          <i data-lucide="phone"></i>
+          <span>305-742-7190</span>
+        </a>
+        <button id="admin-toggle-btn" class="btn btn-outline admin-trigger" aria-label="Admin Portal">
+          <i data-lucide="shield-check"></i>
+          <span>Admin</span>
+        </button>
+        <button class="menu-toggle" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <!-- Background Video/Cinematic Image Overlay -->
+    <div class="hero-bg-overlay"></div>
+    <div class="hero-bg-image" style="background-image: url('./src/images/seven_starr_truck.png');"></div>
+    
+    <div class="container hero-container">
+      <div class="hero-content">
+        <span class="badge hero-badge">NATIONWIDE DRY VAN TRANSPORTATION</span>
+        <h1 class="hero-title animate-text">Moving Freight Across America With <span class="orange-gradient">Reliability & Excellence</span></h1>
+        <p class="hero-subtitle animate-text">Professional Dry Van Transportation Solutions Built on Safety, Trust, and On-Time Deliveries.</p>
+        
+        <div class="hero-buttons">
+          <a href="#quote" class="btn btn-primary">Request A Quote <i data-lucide="arrow-right"></i></a>
+          <a href="#recruitment" class="btn btn-secondary">Join Our Fleet</a>
+        </div>
+      </div>
+
+      <!-- Animated Statistics Grid -->
+      <div class="hero-stats-grid">
+        <div class="stat-card glass-card">
+          <div class="stat-icon"><i data-lucide="truck"></i></div>
+          <div class="stat-info">
+            <h3 class="stat-number" data-target="4">0</h3>
+            <span class="stat-label">Dry Van Units (53 FT)</span>
+          </div>
+        </div>
+        <div class="stat-card glass-card">
+          <div class="stat-icon"><i data-lucide="navigation"></i></div>
+          <div class="stat-info">
+            <h3 class="stat-number" data-target="48">0</h3>
+            <span class="stat-label">States Coverage</span>
+          </div>
+        </div>
+        <div class="stat-card glass-card">
+          <div class="stat-icon"><i data-lucide="clock"></i></div>
+          <div class="stat-info">
+            <h3 class="stat-number" data-target="99">0</h3>
+            <span class="stat-label">On-Time Delivery Rate</span>
+          </div>
+        </div>
+        <div class="stat-card glass-card">
+          <div class="stat-icon"><i data-lucide="headphones"></i></div>
+          <div class="stat-info">
+            <h3 class="stat-number" data-target="24">0</h3>
+            <span class="stat-label">24/7 Dispatch Support</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about" class="about-section section-padding">
+    <div class="container">
+      <div class="grid-2col align-center">
+        <div class="about-content">
+          <span class="section-tag">About Seven Starr Trucking</span>
+          <h2 class="section-title">A Logistics Partner You Can Depend On</h2>
+          <p class="about-text">
+            Seven Starr Trucking LLC was founded with a vision to provide dependable, efficient, and customer-focused freight transportation services across the United States. Starting with a commitment to integrity, safety, and operational excellence, the company has built strong relationships with brokers, shippers, and drivers alike.
+          </p>
+          <p class="about-text">
+            With a growing fleet of modern 53ft dry vans and an experienced dispatch team, Seven Starr Trucking continues to deliver freight solutions that businesses can trust.
+          </p>
+          
+          <div class="mission-box glass-card">
+            <div class="mission-icon">
+              <i data-lucide="target"></i>
+            </div>
+            <div class="mission-body">
+              <h4>Mission Statement</h4>
+              <p>"To provide reliable transportation services while building long-term partnerships through professionalism, safety, and exceptional customer service."</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- CSS 3D Truck Model Container -->
+        <div class="truck-3d-wrapper">
+          <div class="truck-3d-container">
+            <div class="truck-3d-viewport">
+              <div class="truck-3d-object">
+                <!-- Trailer -->
+                <div class="t-face t-front"></div>
+                <div class="t-face t-back"></div>
+                <div class="t-face t-left"></div>
+                <div class="t-face t-right"></div>
+                <div class="t-face t-top"></div>
+                <div class="t-face t-bottom"></div>
+                <!-- Cab -->
+                <div class="c-face c-front"></div>
+                <div class="c-face c-back"></div>
+                <div class="c-face c-left"></div>
+                <div class="c-face c-right"></div>
+                <div class="c-face c-top"></div>
+                <div class="c-face c-bottom"></div>
+              </div>
+            </div>
+          </div>
+          <div class="truck-3d-instructions">
+            <p><i data-lucide="rotate-3d"></i> Scroll or hover to interact with our 53FT Dry Van</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services-section section-padding bg-dark">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">Our Core Offerings</span>
+        <h2 class="section-title text-white">Full-Service Dry Van Freight Solutions</h2>
+        <p class="section-subtitle">We deploy modern fleet units and seasoned logistics staff to handle nationwide shipping demands.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Service Card 1 -->
+        <div class="service-card glass-card">
+          <div class="service-icon"><i data-lucide="container"></i></div>
+          <h3 class="service-name">Dry Van Transportation</h3>
+          <p class="service-desc">Safe and efficient transportation of general cargo, palletized freight, and dry goods nationwide using secure 53ft trailers.</p>
+          <div class="card-bg-gradient"></div>
+        </div>
+        <!-- Service Card 2 -->
+        <div class="service-card glass-card">
+          <div class="service-icon"><i data-lucide="shield-check"></i></div>
+          <h3 class="service-name">Full Truckload (FTL)</h3>
+          <p class="service-desc">Dedicated single-cargo shipping routes for major commercial distributors, ensuring speed, security, and no midway cross-docking.</p>
+          <div class="card-bg-gradient"></div>
+        </div>
+        <!-- Service Card 3 -->
+        <div class="service-card glass-card">
+          <div class="service-icon"><i data-lucide="handshake"></i></div>
+          <h3 class="service-name">Broker Partnerships</h3>
+          <p class="service-desc">Building rock-solid compliance structures and dedicated carrier capacities with major North American third-party brokers.</p>
+          <div class="card-bg-gradient"></div>
+        </div>
+        <!-- Service Card 4 -->
+        <div class="service-card glass-card">
+          <div class="service-icon"><i data-lucide="network"></i></div>
+          <h3 class="service-name">Freight Management</h3>
+          <p class="service-desc">Continuous load scheduling, routing coordination, and logistical management driven by our proactive backend dispatch center.</p>
+          <div class="card-bg-gradient"></div>
+        </div>
+        <!-- Service Card 5 -->
+        <div class="service-card glass-card">
+          <div class="service-icon"><i data-lucide="map-pinned"></i></div>
+          <h3 class="service-name">Nationwide Coverage</h3>
+          <p class="service-desc">Fully licensed, bonded, and insured carrier operations spanning across all 48 continental states with zero route restrictions.</p>
+          <div class="card-bg-gradient"></div>
+        </div>
+        <!-- Service Card 6 -->
+        <div class="service-card glass-card">
+          <div class="service-icon"><i data-lucide="users"></i></div>
+          <h3 class="service-name">Driver Support</h3>
+          <p class="service-desc">Exceptional 24/7 terminal dispatch, routing assistance, compliance logs management, and driver-focused business assistance.</p>
+          <div class="card-bg-gradient"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fleet Gallery & Owner Details -->
+  <section id="fleet" class="fleet-section section-padding">
+    <div class="container">
+      <div class="grid-2col align-center section-header-split">
+        <div>
+          <span class="section-tag">The Fleet</span>
+          <h2 class="section-title">Modern Fleet & Operations</h2>
+          <p class="section-subtitle" style="text-align: left; max-width: 100%;">Equipped with premium 53-foot dry van trailers, air-ride suspension, and cargo tracking units for absolute freight safety.</p>
+        </div>
+        <div class="owner-badge glass-card">
+          <div class="owner-avatar">
+            <span class="avatar-letter">SM</span>
+          </div>
+          <div class="owner-details">
+            <h4 class="owner-name">Sultan Mamun</h4>
+            <p class="owner-title">Founder & CEO</p>
+            <span class="owner-org">Seven Starr Trucking LLC</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="fleet-gallery">
+        <div class="gallery-item glass-card card-hover-expand">
+          <div class="gallery-image" style="background-image: url('./src/images/seven_starr_truck.png');"></div>
+          <div class="gallery-info">
+            <h4>53FT Dry Van Trailers</h4>
+            <p>Clean, weather-sealed, food-grade cargo boxes.</p>
+          </div>
+        </div>
+        
+        <div class="gallery-item glass-card card-hover-expand">
+          <div class="gallery-image" style="background-image: url('./src/images/dry_van_loading.png');"></div>
+          <div class="gallery-info">
+            <h4>Freight Loading</h4>
+            <p>Secure cargo securement, strap bindings, and inspections.</p>
+          </div>
+        </div>
+        
+        <div class="gallery-item glass-card card-hover-expand">
+          <div class="gallery-image" style="background-image: url('https://images.unsplash.com/photo-1501700490588-433790205a88?auto=format&fit=crop&q=80&w=800');"></div>
+          <div class="gallery-info">
+            <h4>Highway Transportation</h4>
+            <p>On-time nationwide dispatching across 48 States.</p>
+          </div>
+        </div>
+        
+        <div class="gallery-item glass-card card-hover-expand">
+          <div class="gallery-image" style="background-image: url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&q=80&w=800');"></div>
+          <div class="gallery-info">
+            <h4>Distribution Centers</h4>
+            <p>Seamless terminal drop-offs and broker facility arrivals.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Real-Time Interactive Map & Tracking Integration -->
+  <section class="tracking-map-section section-padding bg-dark">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">Active Logistics Map</span>
+        <h2 class="section-title text-white">Live Tracking & Nationwide Operations</h2>
+        <p class="section-subtitle">Search your cargo code to track shipment status and see transit markers on our live logistics system.</p>
+      </div>
+
+      <div class="tracking-grid glass-card">
+        <!-- Control Box (Left Side) -->
+        <div class="tracking-control-box">
+          <h3 class="box-title">Freight Status Inquiry</h3>
+          <p class="box-desc">Enter your cargo reference tracking number to locate your active shipment.</p>
+          
+          <div class="tracking-search-wrapper">
+            <input type="text" id="tracking-input" placeholder="e.g., STARR-777 or STARR-999" aria-label="Tracking Reference Number">
+            <button id="tracking-search-btn" class="btn btn-primary"><i data-lucide="search"></i> Search</button>
+          </div>
+          <p class="tracking-tip">Demo Codes: <strong class="orange-text">STARR-777</strong> (In Transit), <strong class="orange-text">STARR-999</strong> (Delivered)</p>
+          
+          <div id="tracking-result-box" class="tracking-result-box hidden">
+            <!-- Dynamic Tracker Content -->
+            <div class="tracking-summary">
+              <span id="tracker-status-badge" class="badge">In Transit</span>
+              <h4 id="tracker-ref-id">STARR-777</h4>
+            </div>
+            
+            <div class="tracking-route-details">
+              <div>
+                <span class="route-label">Origin</span>
+                <p id="tracker-origin">Hialeah, FL</p>
+              </div>
+              <div class="route-arrow"><i data-lucide="arrow-right"></i></div>
+              <div>
+                <span class="route-label">Destination</span>
+                <p id="tracker-destination">Chicago, IL</p>
+              </div>
+            </div>
+
+            <!-- Vertical Timeline Tracker -->
+            <div class="timeline-wrapper">
+              <div class="timeline-step" id="step-ordered">
+                <span class="step-dot"></span>
+                <div class="step-text">
+                  <h5>Order Confirmed</h5>
+                  <p>Freight booked & trailer assigned</p>
+                </div>
+              </div>
+              <div class="timeline-step" id="step-loaded">
+                <span class="step-dot"></span>
+                <div class="step-text">
+                  <h5>Cargo Loaded</h5>
+                  <p>53FT Dry Van sealed & pre-tripped</p>
+                </div>
+              </div>
+              <div class="timeline-step" id="step-transit">
+                <span class="step-dot"></span>
+                <div class="step-text">
+                  <h5>In Transit</h5>
+                  <p>Over-the-road transport in progress</p>
+                </div>
+              </div>
+              <div class="timeline-step" id="step-delivered">
+                <span class="step-dot"></span>
+                <div class="step-text">
+                  <h5>Delivered</h5>
+                  <p>Arrived at terminal facility, signed BOL</p>
+                </div>
+              </div>
+            </div>
+            
+            <div id="tracker-update-info" class="tracker-update-info">
+              <i data-lucide="info"></i> Last active ping: <span id="tracker-ping-time">Just now</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Map Container (Right Side) -->
+        <div class="map-wrapper">
+          <div id="logistics-map"></div>
+          <div class="map-legend">
+            <span><span class="legend-color orange"></span> Active Truck</span>
+            <span><span class="legend-color navy"></span> Dispatch Center</span>
+            <span><span class="legend-dashed"></span> Transit Route</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="why-section section-padding">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">Our Strengths</span>
+        <h2 class="section-title">Why Logistics Leaders Partner With Seven Starr</h2>
+        <p class="section-subtitle">We manage a standard of service built for the demanding timelines of modern shippers and brokers.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card glass-card">
+          <div class="feature-icon"><i data-lucide="shield-check"></i></div>
+          <h4>Safety First</h4>
+          <p>Rigorous pre-trip inspections, electronic logging compliance, and high driver standards for damage-free transit.</p>
+        </div>
+        <div class="feature-card glass-card">
+          <div class="feature-icon"><i data-lucide="briefcase"></i></div>
+          <h4>Experienced Team</h4>
+          <p>Founded by logistics expert Sultan Mamun, running dispatch coordinators and safe drivers.</p>
+        </div>
+        <div class="feature-card glass-card">
+          <div class="feature-icon"><i data-lucide="radio-receiver"></i></div>
+          <h4>Real-Time Communication</h4>
+          <p>Instant digital status pings, cellular direct links, and regular broker updates during OTR routes.</p>
+        </div>
+        <div class="feature-card glass-card">
+          <div class="feature-icon"><i data-lucide="check-circle-2"></i></div>
+          <h4>On-Time Deliveries</h4>
+          <p>99% on-time execution backed by optimal route planning and proactive maintenance scheduling.</p>
+        </div>
+        <div class="feature-card glass-card">
+          <div class="feature-icon"><i data-lucide="line-chart"></i></div>
+          <h4>Competitive Rates</h4>
+          <p>Optimize cargo margins with competitive per-mile quotes and customized lanes contract structures.</p>
+        </div>
+        <div class="feature-card glass-card">
+          <div class="feature-icon"><i data-lucide="globe"></i></div>
+          <h4>Nationwide Service</h4>
+          <p>Comprehensive lanes coverage operating in major freight corridors within the continental United States.</p>
+        </div>
+        <div class="feature-card glass-card">
+          <div class="feature-icon"><i data-lucide="headphones"></i></div>
+          <h4>Professional Dispatch</h4>
+          <p>24/7 backend dispatch agents handling emergency reroutes, broker setups, and driver alerts.</p>
+        </div>
+        <div class="feature-card glass-card">
+          <div class="feature-icon"><i data-lucide="heart"></i></div>
+          <h4>Driver-Friendly Operations</h4>
+          <p>Excellent pay rates, weekly settlements, compliance support, and a positive team culture.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recruitment Banner & Form -->
+  <section id="recruitment" class="recruitment-section section-padding bg-dark text-white">
+    <div class="container">
+      <div class="recruitment-banner glass-card">
+        <div class="recruitment-intro">
+          <span class="badge badge-accent">DRIVER JOBS</span>
+          <h2 class="banner-title text-white">Grow Your Business With Seven Starr Trucking</h2>
+          <p class="banner-subtitle">Owner Operators: Lease onto Seven Starr Trucking's MC for reliable lanes, competitive pay, and professional dispatch support.</p>
+          
+          <ul class="benefits-list">
+            <li><i data-lucide="circle-check" class="orange-text"></i> Weekly Settlements & Direct Deposits</li>
+            <li><i data-lucide="circle-check" class="orange-text"></i> Dedicated 24/7 Dispatch Support</li>
+            <li><i data-lucide="circle-check" class="orange-text"></i> High-Rate Revenue Lanes Opportunities</li>
+            <li><i data-lucide="circle-check" class="orange-text"></i> Direct Broker Relations & Consistent Freight</li>
+            <li><i data-lucide="circle-check" class="orange-text"></i> Safety & FMCSA Compliance Support</li>
+            <li><i data-lucide="circle-check" class="orange-text"></i> Driver-Focused, Respectful Company Culture</li>
+          </ul>
+        </div>
+        
+        <div class="recruitment-form-box glass-card" id="driver-app-anchor">
+          <h3 class="form-title text-white">Lease-On Application Form</h3>
+          <p class="form-desc text-white-50">Provide details below to initiate carrier verification. Recruiter will reply within 24 hours.</p>
+          
+          <form id="driver-application-form" class="logistics-form">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="driver-name">Full Name *</label>
+                <input type="text" id="driver-name" required placeholder="John Doe">
+              </div>
+              <div class="form-group">
+                <label for="driver-company">Company Name (If applicable)</label>
+                <input type="text" id="driver-company" placeholder="JD Transport LLC">
+              </div>
+              <div class="form-group">
+                <label for="driver-phone">Phone Number *</label>
+                <input type="tel" id="driver-phone" required placeholder="305-555-0199">
+              </div>
+              <div class="form-group">
+                <label for="driver-email">Email Address *</label>
+                <input type="email" id="driver-email" required placeholder="john@company.com">
+              </div>
+              <div class="form-group">
+                <label for="driver-location">Current Location *</label>
+                <input type="text" id="driver-location" required placeholder="Hialeah, FL">
+              </div>
+              <div class="form-group">
+                <label for="driver-truck-no">Truck Number</label>
+                <input type="text" id="driver-truck-no" placeholder="101">
+              </div>
+              <div class="form-group">
+                <label for="driver-truck-type">Truck Type *</label>
+                <select id="driver-truck-type" required>
+                  <option value="" disabled selected>Select truck type</option>
+                  <option value="Semi-Tractor (Sleeper)">Semi-Tractor (Sleeper)</option>
+                  <option value="Semi-Tractor (Day Cab)">Semi-Tractor (Day Cab)</option>
+                  <option value="Box Truck / Other">Box Truck / Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="driver-experience">Years of OTR Experience *</label>
+                <input type="number" id="driver-experience" min="0" max="50" required placeholder="5">
+              </div>
+              <div class="form-group">
+                <label for="driver-mc">MC Number (If applicable)</label>
+                <input type="text" id="driver-mc" placeholder="1689367">
+              </div>
+              <div class="form-group">
+                <label for="driver-dot">DOT Number (If applicable)</label>
+                <input type="text" id="driver-dot" placeholder="4009071">
+              </div>
+              <div class="form-group span-2">
+                <label for="driver-states">Preferred Operating States *</label>
+                <input type="text" id="driver-states" required placeholder="FL, GA, TX, Midwest, etc.">
+              </div>
+              
+              <!-- Custom Premium File Upload Inputs -->
+              <div class="form-group">
+                <label>Upload CDL Card *</label>
+                <div class="file-upload-wrapper">
+                  <input type="file" id="driver-cdl" accept=".pdf,.jpg,.png" required class="file-input-hidden">
+                  <div class="file-upload-design">
+                    <i data-lucide="upload-cloud"></i>
+                    <span class="file-label-text">CDL_License.pdf</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Upload Insurance *</label>
+                <div class="file-upload-wrapper">
+                  <input type="file" id="driver-insurance" accept=".pdf,.jpg,.png" required class="file-input-hidden">
+                  <div class="file-upload-design">
+                    <i data-lucide="upload-cloud"></i>
+                    <span class="file-label-text">Insurance_COI.pdf</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group span-2">
+                <label for="driver-notes">Additional Notes / Equipment Info</label>
+                <textarea id="driver-notes" rows="3" placeholder="Tell us about your rig, clean driving record, or lane requirements."></textarea>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block form-submit-btn">
+              <span>Submit Driver Application</span>
+              <i data-lucide="send"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Request Form Section -->
+  <section id="quote" class="quote-section section-padding">
+    <div class="container">
+      <div class="quote-grid glass-card">
+        <div class="quote-info-side">
+          <span class="section-tag">Instant Pricing</span>
+          <h2 class="section-title">Request a Freight Shipping Quote</h2>
+          <p class="section-desc">Submit shipment weight, origin, and destination details. Our routing desk will calculate lanes pricing and return an dispatch estimate contract immediately.</p>
+          
+          <div class="quote-highlight-cards">
+            <div class="highlight-item">
+              <i data-lucide="route" class="orange-text"></i>
+              <div>
+                <h5>Customized Corridors</h5>
+                <p>Optimized dry van route pricing.</p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <i data-lucide="calendar" class="orange-text"></i>
+              <div>
+                <h5>High Capacity Lane Allocation</h5>
+                <p>Ensured spots for weekly contracted loads.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="quote-form-side">
+          <form id="shipper-quote-form" class="logistics-form">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="quote-company">Company Name *</label>
+                <input type="text" id="quote-company" required placeholder="Apex Distribution Inc.">
+              </div>
+              <div class="form-group">
+                <label for="quote-contact">Contact Name *</label>
+                <input type="text" id="quote-contact" required placeholder="Sultan Mamun">
+              </div>
+              <div class="form-group">
+                <label for="quote-phone">Phone Number *</label>
+                <input type="tel" id="quote-phone" required placeholder="305-742-7190">
+              </div>
+              <div class="form-group">
+                <label for="quote-email">Email Address *</label>
+                <input type="email" id="quote-email" required placeholder="smamun@company.com">
+              </div>
+              <div class="form-group">
+                <label for="quote-pickup">Pickup Location *</label>
+                <input type="text" id="quote-pickup" required placeholder="Hialeah, FL 33015">
+              </div>
+              <div class="form-group">
+                <label for="quote-delivery">Delivery Location *</label>
+                <input type="text" id="quote-delivery" required placeholder="Chicago, IL">
+              </div>
+              <div class="form-group">
+                <label for="quote-freight">Freight Type / Commodity *</label>
+                <input type="text" id="quote-freight" required placeholder="Palletized general dry cargo">
+              </div>
+              <div class="form-group">
+                <label for="quote-weight">Est. Weight (lbs) *</label>
+                <input type="number" id="quote-weight" required min="1" max="45000" placeholder="42000">
+              </div>
+              <div class="form-group span-2">
+                <label for="quote-trailer">Trailer Type Required *</label>
+                <select id="quote-trailer" required>
+                  <option value="53ft Dry Van" selected>53 FT Dry Van (Standard)</option>
+                  <option value="53ft Dry Van with Liftgate">53 FT Dry Van with Liftgate</option>
+                  <option value="Other / Team Drivers Lane">Other / Team Drivers Lane</option>
+                </select>
+              </div>
+              <div class="form-group span-2">
+                <label for="quote-notes">Additional Shipping Requirements</label>
+                <textarea id="quote-notes" rows="3" placeholder="Specify loading dock hours, liftgate demands, or hazard classifications."></textarea>
+              </div>
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-block form-submit-btn">
+              <span>Request Logistics Quote</span>
+              <i data-lucide="calculator"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials-section section-padding bg-dark">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">Reviews</span>
+        <h2 class="section-title text-white">Trusted by Brokers and Shippers Nationwide</h2>
+        <p class="section-subtitle">Read feedback from brokers and commercial partners who rely on Seven Starr Trucking LLC.</p>
+      </div>
+
+      <div class="testimonials-slider-container">
+        <div class="testimonials-track" id="testimonial-track">
+          <!-- Slide 1 -->
+          <div class="testimonial-card glass-card">
+            <div class="review-stars">
+              <i data-lucide="star" class="star-filled"></i>
+              <i data-lucide="star" class="star-filled"></i>
+              <i data-lucide="star" class="star-filled"></i>
+              <i data-lucide="star" class="star-filled"></i>
+              <i data-lucide="star" class="star-filled"></i>
+            </div>
+            <p class="review-text">"Seven Starr Trucking is one of our most dependable carriers in the Southeast. DOT safety compliance is outstanding, drivers are communicative, and they have hit 100% on-time metrics on our critical lanes. Sultan's team handles logistics beautifully."</p>
+            <div class="reviewer-meta">
+              <div class="reviewer-img" style="background-image: url('https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=120');"></div>
+              <div class="reviewer-details">
+                <h5 class="reviewer-name">Marcus Vance</h5>
+                <span class="reviewer-title">Senior Logistics Coordinator, CH Robinson</span>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="testimonial-card glass-card">
+            <div class="review-stars">
+              <i data-lucide="star" class="star-filled"></i>
+              <i data-lucide="star" class="star-filled"></i>
+              <i data-lucide="star" class="star-filled"></i>
+              <i data-lucide="star" class="star-filled"></i>
+              <i data-lucide="star" class="star-filled"></i>
+            </div>
+            <p class="review-text">"As a freight broker, finding carriers that respect delivery times and send proactive status updates is rare. Seven Starr's dispatcher team responds instantly to pings. They booked a hot load out of Florida and delivered it early in Texas."</p>
+            <div class="reviewer-meta">
+              <div class="reviewer-img" style="background-image: url('https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=120');"></div>
+              <div class="reviewer-details">
+                <h5 class="reviewer-name">David L. Miller</h5>
+                <span class="reviewer-title">Director of Carrier Relations, TQL</span>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="testimonial-card glass-card">
+            <div class="review-stars">
+              <i data-lucide="star" class="star-filled"></i>
+              <i data-lucide="star" class="star-filled"></i>
+              <i data-lucide="star" class="star-filled"></i>
+              <i data-lucide="star" class="star-filled"></i>
+              <i data-lucide="star" class="star-filled"></i>
+            </div>
+            <p class="review-text">"We regularly lease loads onto Seven Starr Trucking's MC. Weekly settlements are punctual and exact, and Sultan's dispatch crew respects driver safety limits. Highly recommend driver operators looking for carrier integration."</p>
+            <div class="reviewer-meta">
+              <div class="reviewer-img" style="background-image: url('https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=120');"></div>
+              <div class="reviewer-details">
+                <h5 class="reviewer-name">Eduardo Rodriguez</h5>
+                <span class="reviewer-title">Owner Operator, Florida Freight Inc.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="slider-controls">
+          <button id="prev-review-btn" class="slider-arrow" aria-label="Previous Review"><i data-lucide="chevron-left"></i></button>
+          <div class="slider-dots" id="slider-dots"></div>
+          <button id="next-review-btn" class="slider-arrow" aria-label="Next Review"><i data-lucide="chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section (Accordion) -->
+  <section class="faq-section section-padding">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">Common Inquiries</span>
+        <h2 class="section-title">Logistics & Compliance FAQ</h2>
+        <p class="section-subtitle">Find fast answers regarding driver onboarding, lane coverage, and shipping dispatch estimates.</p>
+      </div>
+
+      <div class="faq-grid max-width-md">
+        <div class="faq-item glass-card">
+          <div class="faq-question">
+            <span>What geographic areas does Seven Starr Trucking serve?</span>
+            <i data-lucide="plus"></i>
+          </div>
+          <div class="faq-answer">
+            <p>We provide nationwide logistics coverage, hauling freight across all 48 continental states. Our primary dispatch terminal is based in Hialeah, Florida (Miami area), with heavy lane density in the East Coast, Midwest, and Southern regions.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item glass-card">
+          <div class="faq-question">
+            <span>What specific types of freight do you haul?</span>
+            <i data-lucide="plus"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Our fleet is fully equipped with 53ft Dry Van trailers. We haul a wide range of dry commodities, including palletized dry goods, consumer products, industrial parts, paper items, and non-hazardous general freight.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item glass-card">
+          <div class="faq-question">
+            <span>How quickly can I receive a shipping lane quote?</span>
+            <i data-lucide="plus"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Shippers or brokers submitting quotes via our website form generally receive a custom contract rate sheet directly back in their email inbox within 30 to 60 minutes during standard dispatch operating hours.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item glass-card">
+          <div class="faq-question">
+            <span>Do you work with third-party logistics brokers?</span>
+            <i data-lucide="plus"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Yes, we maintain carrier accounts and setups with major logistics brokers like CH Robinson, TQL, Coyote Logistics, and Echo Global. We are fully bonded and hold active USDOT #4009071 and MC #1689367 authorities.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item glass-card">
+          <div class="faq-question">
+            <span>Can independent Owner Operators lease onto your MC?</span>
+            <i data-lucide="plus"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Yes! We have a leasing program for independent owner operators. You can submit your CDL, insurance documents, and truck details directly through our application form. We offer weekly direct settlements, compliance assistance, and high-paying dispatch options.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section section-padding bg-dark text-white">
+    <div class="container">
+      <div class="grid-2col align-stretch">
+        <div class="contact-info-panel glass-card">
+          <span class="section-tag">Get in Touch</span>
+          <h2 class="section-title text-white">Contact Our Logistics Office</h2>
+          <p class="section-desc text-white-50">Speak directly to Sultan Mamun or our routing dispatchers for immediate carrier support or driver setups.</p>
+          
+          <div class="contact-details-list">
+            <div class="contact-item">
+              <div class="contact-icon"><i data-lucide="building"></i></div>
+              <div class="contact-body">
+                <h5>Seven Starr Trucking LLC</h5>
+                <p>Owner: Sultan Mamun</p>
+                <p>19900 NW 86th CT, Hialeah, Florida 33015</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i data-lucide="phone"></i></div>
+              <div class="contact-body">
+                <h5>Direct Dispatch Hotline</h5>
+                <a href="tel:305-742-7190" class="contact-link text-white font-semibold">305-742-7190</a>
+                <p>Available 24/7 for active truck operations</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i data-lucide="shield"></i></div>
+              <div class="contact-body">
+                <h5>Compliance & Authority Registration</h5>
+                <p>USDOT #4009071</p>
+                <p>MC #1689367</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="contact-actions-grid">
+            <a href="tel:305-742-7190" class="btn btn-primary"><i data-lucide="phone-call"></i> Call Now</a>
+            <a href="https://maps.google.com/?q=19900+NW+86th+CT,+Hialeah,+FL+33015" target="_blank" rel="noopener noreferrer" class="btn btn-outline"><i data-lucide="map"></i> Get Directions</a>
+          </div>
+        </div>
+
+        <div class="contact-right-panel glass-card">
+          <h3 class="form-title text-white">Send Direct Message</h3>
+          <p class="form-desc text-white-50">Have a general question? Write to us below.</p>
+          
+          <form id="contact-email-form" class="logistics-form">
+            <div class="form-group">
+              <label for="contact-name">Full Name *</label>
+              <input type="text" id="contact-name" required placeholder="Marcus Vance">
+            </div>
+            <div class="form-group">
+              <label for="contact-email">Email Address *</label>
+              <input type="email" id="contact-email" required placeholder="marcus@chrobinson.com">
+            </div>
+            <div class="form-group">
+              <label for="contact-subject">Subject *</label>
+              <input type="text" id="contact-subject" required placeholder="Florida to Illinois Dedicated Lanes">
+            </div>
+            <div class="form-group">
+              <label for="contact-message">Message *</label>
+              <textarea id="contact-message" rows="4" required placeholder="Write your message here..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block form-submit-btn">
+              <span>Send Message</span>
+              <i data-lucide="mail"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-logo">SEVEN<span class="orange-text">STARR</span> <span class="subtext">TRUCKING</span></span>
+          <p class="brand-desc">Nationwide 53ft Dry Van cargo carrier. Insured, bonded, FMCSA registered logistics provider based in Florida.</p>
+          <div class="authority-badges">
+            <span class="badge">DOT #4009071</span>
+            <span class="badge">MC #1689367</span>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Sitemap</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About Company</a></li>
+            <li><a href="#services">Logistics Services</a></li>
+            <li><a href="#fleet">Our Fleet</a></li>
+            <li><a href="#recruitment">Careers (Driver Lease)</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-legal">
+          <h4>Broker & Driver Resources</h4>
+          <ul>
+            <li><a href="#quote">Request Quote</a></li>
+            <li><a href="#driver-app-anchor">Apply to Lease</a></li>
+            <li><a href="#" id="admin-trigger-footer">Admin Console</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact">
+          <h4>Operations Desk</h4>
+          <p>19900 NW 86th CT<br>Hialeah, FL 33015</p>
+          <a href="tel:305-742-7190" class="phone-link"><i data-lucide="phone"></i> 305-742-7190</a>
+          
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook Link"><i data-lucide="facebook"></i></a>
+            <a href="#" aria-label="Twitter Link"><i data-lucide="twitter"></i></a>
+            <a href="#" aria-label="Linkedin Link"><i data-lucide="linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <hr class="footer-divider">
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Seven Starr Trucking LLC. All Rights Reserved. FMCSA Compliant. Designed with Antigravity.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating AI Chatbot Widget -->
+  <div class="chatbot-widget" id="chatbot-widget">
+    <button class="chatbot-toggle-btn" id="chatbot-toggle-btn" aria-label="Open Chatbot Assistant">
+      <i data-lucide="message-square" class="icon-open"></i>
+      <i data-lucide="x" class="icon-close hidden"></i>
+      <span class="chat-pulse"></span>
+    </button>
+    
+    <div class="chatbot-window glass-card hidden" id="chatbot-window">
+      <div class="chat-header">
+        <div class="chat-avatar">
+          <span class="avatar-letter">S</span>
+        </div>
+        <div class="chat-title-wrapper">
+          <h4>StarrBot</h4>
+          <p><span class="dot-online"></span> AI Dispatch Assistant</p>
+        </div>
+      </div>
+      
+      <div class="chat-body" id="chat-body">
+        <div class="chat-msg bot-msg">
+          <div class="msg-content">
+            <p>Welcome to Seven Starr Trucking LLC! I'm StarrBot, your automated dispatch assistant. How can I help you today?</p>
+          </div>
+        </div>
+        <div class="chat-options">
+          <button class="chat-opt-btn" data-value="quote">Request Lane Quote</button>
+          <button class="chat-opt-btn" data-value="join">Apply to Lease-On</button>
+          <button class="chat-opt-btn" data-value="tracking">Track active Cargo</button>
+          <button class="chat-opt-btn" data-value="contact">Office Details</button>
+        </div>
+      </div>
+      
+      <form class="chat-footer" id="chat-input-form">
+        <input type="text" id="chat-message-input" placeholder="Type a message..." aria-label="Chat input message">
+        <button type="submit" class="chat-send-btn" aria-label="Send message"><i data-lucide="send"></i></button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Admin Dashboard Sliding Overlay -->
+  <div class="admin-dashboard-overlay hidden" id="admin-dashboard-overlay">
+    <div class="admin-dashboard-panel glass-card">
+      <div class="admin-header">
+        <div class="admin-header-title">
+          <i data-lucide="shield-alert" class="orange-text"></i>
+          <div>
+            <h3>Sultan Starr Control Panel</h3>
+            <p>Seven Starr Trucking LLC Admin Dashboard</p>
+          </div>
+        </div>
+        <button id="admin-close-btn" class="admin-close-btn" aria-label="Close Admin Dashboard"><i data-lucide="x"></i></button>
+      </div>
+
+      <!-- Login Window -->
+      <div id="admin-login-box" class="admin-login-box">
+        <form id="admin-login-form">
+          <div class="form-group">
+            <label for="admin-username">Admin Username</label>
+            <input type="text" id="admin-username" required value="admin" class="admin-input">
+          </div>
+          <div class="form-group">
+            <label for="admin-password">Password</label>
+            <input type="password" id="admin-password" required value="sevenstarr" class="admin-input">
+          </div>
+          <div id="login-error-msg" class="login-error-msg hidden">Invalid username or password. Try admin/sevenstarr.</div>
+          <button type="submit" class="btn btn-primary btn-block">Authorize Access</button>
+        </form>
+      </div>
+
+      <!-- Dashboard Contents (Toggled) -->
+      <div id="admin-content-box" class="admin-content-box hidden">
+        <!-- Tabs Nav -->
+        <nav class="admin-tabs">
+          <button class="admin-tab-btn active" data-tab="driver-apps"><i data-lucide="file-text"></i> Drivers (<span id="count-driver-apps">0</span>)</button>
+          <button class="admin-tab-btn" data-tab="shipper-quotes"><i data-lucide="calculator"></i> Quotes (<span id="count-shipper-quotes">0</span>)</button>
+          <button class="admin-tab-btn" data-tab="tracking-manager"><i data-lucide="navigation"></i> Tracking</button>
+        </nav>
+
+        <!-- Tab contents -->
+        <div class="tab-contents">
+          <!-- Drivers List Tab -->
+          <div class="admin-tab-pane active" id="tab-driver-apps">
+            <div class="table-scroll-wrapper">
+              <table class="admin-table">
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Driver Name</th>
+                    <th>Location</th>
+                    <th>Equipment</th>
+                    <th>Experience</th>
+                    <th>CDL/Insurance</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="driver-apps-tbody">
+                  <!-- Dynamic rows go here -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+          
+          <!-- Shipper Quotes Tab -->
+          <div class="admin-tab-pane" id="tab-shipper-quotes">
+            <div class="table-scroll-wrapper">
+              <table class="admin-table">
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Shipper Company</th>
+                    <th>Contact</th>
+                    <th>Lane (O &rarr; D)</th>
+                    <th>Cargo Weight</th>
+                    <th>Trailer Info</th>
+                    <th>Notes</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="shipper-quotes-tbody">
+                  <!-- Dynamic rows go here -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+          
+          <!-- Tracking Manager Tab -->
+          <div class="admin-tab-pane" id="tab-tracking-manager">
+            <div class="tracking-manager-tool">
+              <h4 class="sub-title">Control Active Shipments on Map</h4>
+              <p class="desc">Select a tracking number to update its status or current coordinate position. This triggers changes in the customer view instantly.</p>
+              
+              <div class="tracking-edit-box">
+                <div class="form-group">
+                  <label for="admin-select-truck">Active Shipment</label>
+                  <select id="admin-select-truck">
+                    <option value="STARR-777" selected>STARR-777 (Origin: Florida, Dest: Illinois)</option>
+                    <option value="STARR-999">STARR-999 (Origin: California, Dest: Texas)</option>
+                  </select>
+                </div>
+                
+                <div class="form-group">
+                  <label for="admin-truck-status">Current Status</label>
+                  <select id="admin-truck-status">
+                    <option value="ordered">Order Confirmed</option>
+                    <option value="loaded">Cargo Loaded</option>
+                    <option value="transit">In Transit</option>
+                    <option value="delivered">Delivered</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="admin-truck-progress">Transit Progress (0% - 100%)</label>
+                  <div class="flex-row">
+                    <input type="range" id="admin-truck-progress" min="0" max="100" value="65">
+                    <span id="admin-progress-value">65%</span>
+                  </div>
+                </div>
+
+                <button id="admin-update-tracking-btn" class="btn btn-primary"><i data-lucide="refresh-cw"></i> Update Shipment Status</button>
+              </div>
+              
+              <div class="alert-box alert-success hidden" id="tracking-update-alert">
+                <i data-lucide="check-circle-2"></i> Shipment information successfully saved! Live map markers synchronized.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification System -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Leaflet Map JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  
+  <!-- App JS -->
+  <script src="./src/main.js"></script>
+</body>
+</html>
