@@ -13,14 +13,20 @@ document.addEventListener('DOMContentLoaded', () => {
      1. Page Loading Animation
      ========================================================================== */
   const loader = document.getElementById('loader');
-  window.addEventListener('load', () => {
+  const hideLoader = () => {
     setTimeout(() => {
       if (loader) {
         loader.classList.add('fade-out');
         document.body.style.overflow = 'initial';
       }
     }, 1200); // Premium visual duration
-  });
+  };
+
+  if (document.readyState === 'complete') {
+    hideLoader();
+  } else {
+    window.addEventListener('load', hideLoader);
+  }
 
   /* ==========================================================================
      2. Sticky Header & Mobile Navigation Menu
